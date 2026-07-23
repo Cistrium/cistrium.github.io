@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cistrium | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        bg: '#0a0a0a',
+                        card: '#121212',
+                        border: '#1f1f22',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #d4d4d8;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+
+        .bg-noise {
+            position: fixed;
+            top: 0; left: 0; w: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .stagger-1 { animation-delay: 100ms; opacity: 0; }
+        .stagger-2 { animation-delay: 200ms; opacity: 0; }
+        .stagger-3 { animation-delay: 300ms; opacity: 0; }
+        .stagger-4 { animation-delay: 400ms; opacity: 0; }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col items-center py-16 px-4 sm:px-6 selection:bg-zinc-800 selection:text-white">
+    
+    <div class="bg-noise"></div>
+
+    <main class="w-full max-w-xl space-y-12 relative z-10">
+
+        <header class="flex flex-row items-center text-left gap-5 sm:gap-6 animate-fade-in-up stagger-1">
+            <div class="relative group shrink-0">
+                <div class="absolute -inset-0.5 bg-gradient-to-b from-zinc-700 to-transparent rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <img src="avatar.png" alt="Cistrium Avatar" class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border border-zinc-800 shadow-2xl bg-card" onerror="this.src='https://placehold.co/400x400/121212/ffffff?text=C'">
+            </div>
+            
+            <div class="space-y-2">
+                <div class="space-y-0.5">
+                    <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Cistrium</h1>
+                    <div class="text-xs sm:text-sm font-mono text-zinc-500">Developer & Creator</div>
+                </div>
+                <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                    Write code, create things, and collect ideas that eventually grow into something more. Welcome to my page.
+                </p>
+            </div>
+        </header>
+
+        <section class="space-y-3 animate-fade-in-up stagger-2">
+            <h2 class="text-xs font-mono text-zinc-600 uppercase tracking-widest px-2 mb-4">Information</h2>
+            
+            <a href="mailto:afterintefere@gmail.com" class="group flex items-center justify-between p-4 rounded-2xl bg-card border border-border hover:bg-zinc-900 hover:border-zinc-700 transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:bg-zinc-800 transition-all">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">afterintefere@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-zinc-700 group-hover:text-zinc-400 -translate-x-2 group-hover:translate-x-0 transition-all duration-300"></i>
+            </a>
+
+            <a href="https://t.me/cistik" target="_blank" class="group flex items-center justify-between p-4 rounded-2xl bg-card border border-border hover:bg-zinc-900 hover:border-zinc-700 transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-[#229ED9] group-hover:bg-zinc-800 transition-all">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">@cistik</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-zinc-700 group-hover:text-zinc-400 -translate-x-2 group-hover:translate-x-0 transition-all duration-300"></i>
+            </a>
+
+            <button onclick="copyDiscord('cistrium')" class="w-full text-left group flex items-center justify-between p-4 rounded-2xl bg-card border border-border hover:bg-zinc-900 hover:border-zinc-700 transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-[#5865F2] group-hover:bg-zinc-800 transition-all">
+                        <i class="fa-brands fa-discord"></i>
+                    </div>
+                    <span id="discordText" class="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">cistrium</span>
+                </div>
+                <i class="fa-regular fa-copy text-zinc-700 group-hover:text-zinc-400 transition-colors"></i>
+            </button>
+
+            <a href="https://github.com/Cistrium" target="_blank" class="group flex items-center justify-between p-4 rounded-2xl bg-card border border-border hover:bg-zinc-900 hover:border-zinc-700 transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:bg-zinc-800 transition-all">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors font-mono">/Cistrium</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-zinc-700 group-hover:text-zinc-400 -translate-x-2 group-hover:translate-x-0 transition-all duration-300"></i>
+            </a>
+        </section>
+
+        <section class="space-y-3 animate-fade-in-up stagger-3">
+            <h2 class="text-xs font-mono text-zinc-600 uppercase tracking-widest px-2 mb-4">Different things</h2>
+            <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div class="aspect-square bg-card border border-border rounded-2xl overflow-hidden group cursor-pointer relative" onclick="openLightbox('cat.gif')">
+                    <div class="absolute inset-0 flex items-center justify-center text-zinc-800 text-xs font-mono -z-10">cat.gif</div>
+                    <img src="cat.gif" alt="Cat GIF" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale-[30%] group-hover:grayscale-0" onerror="this.style.opacity='0'">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                        <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-50 group-hover:scale-100"></i>
+                    </div>
+                </div>
+                
+                <div class="aspect-square bg-card border border-border rounded-2xl overflow-hidden group cursor-pointer relative" onclick="openLightbox('cat1.gif')">
+                    <div class="absolute inset-0 flex items-center justify-center text-zinc-800 text-xs font-mono -z-10">cat1.gif</div>
+                    <img src="cat1.gif" alt="Cat GIF 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale-[30%] group-hover:grayscale-0" onerror="this.style.opacity='0'">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                        <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-50 group-hover:scale-100"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pt-8 pb-4 text-center animate-fade-in-up stagger-4">
+            <p class="text-xs text-zinc-700 font-mono">© 2026 Cistrium. All vibes reserved.</p>
+        </footer>
+
+    </main>
+
+    <div id="lightbox" class="fixed inset-0 bg-bg/95 z-50 hidden flex-col items-center justify-center p-4 backdrop-blur-md opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors flex items-center justify-center">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightboxImg" src="" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl border border-zinc-800 scale-95 transition-transform duration-300 object-contain">
+    </div>
+
+    <script>
+        function copyDiscord(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed"; 
+            textArea.style.opacity = "0";
+            document.body.appendChild(textArea);
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                const discordTextElem = document.getElementById('discordText');
+                const originalText = discordTextElem.innerText;
+                
+                discordTextElem.innerText = 'Скопировано!';
+                discordTextElem.classList.add('text-green-400');
+                
+                setTimeout(() => {
+                    discordTextElem.innerText = originalText;
+                    discordTextElem.classList.remove('text-green-400');
+                }, 2000);
+            } catch (err) {
+                console.error('Ошибка копирования', err);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            void lightbox.offsetWidth; 
+            lightbox.classList.add('opacity-100');
+            lightboxImg.classList.remove('scale-95');
+            lightboxImg.classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('opacity-100');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+    </script>
+</body>
+</html>
