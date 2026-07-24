@@ -225,7 +225,7 @@
                 const discordTextElem = document.getElementById('discordText');
                 const originalText = discordTextElem.innerText;
                 
-                discordTextElem.innerText = 'Скопировано!';
+                discordTextElem.innerText = 'Copied!';
                 discordTextElem.classList.add('text-green-400');
                 
                 setTimeout(() => {
@@ -233,7 +233,7 @@
                     discordTextElem.classList.remove('text-green-400');
                 }, 2000);
             } catch (err) {
-                console.error('Ошибка копирования', err);
+                console.error('Copy error', err);
             }
             
             document.body.removeChild(textArea);
